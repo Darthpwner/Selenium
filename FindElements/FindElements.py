@@ -13,13 +13,13 @@ class FindElements(unittest.TestCase):
         global driver
         driver = webdriver.Firefox()
         driver.get("http://travelingtony.weebly.com/store/c2/Lope.html")
-        driver.implicitly_wait(15)
+        #driver.implicitly_wait(15)
     
     
     def test_FindElements(self):
-        #webElementsList      = driver.find_elements_by_xpath("")
-        #webElementsList      = driver.find_elements_by_css_selector("")
-        #webElementsList      = WebDriverWait(driver, 10).until(lambda driver: driver.find_elements_by_xpath(""))
+        #webElementsList      = driver.find_elements_by_xpath("//img")
+        #webElementsList      = driver.find_elements_by_css_selector("img")
+        webElementsList      = WebDriverWait(driver, 10).until(lambda driver: driver.find_elements_by_xpath("//img"))
         #webElementsList      = WebDriverWait(driver, 10).until(lambda driver: driver.find_elements_by_css_selector(""))
         print webElementsList
     
