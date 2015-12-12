@@ -21,7 +21,10 @@ class WaitForElements(unittest.TestCase):
         bLocator = "//span[.='Check out my coolest photos']"
         seebutton = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, bLocator)))
 
-    
+    def test_WaitForSearchField(self):
+        sLocator = "input.wsite-search-input"
+        sField = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, sLocator)))
+
     def tearDown(self):
         driver.quit()
 
