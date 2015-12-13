@@ -26,7 +26,8 @@ class SwitchToAlert(unittest.TestCase):
                                 until(lambda driver: driver.find_element_by_xpath(leaveButtonLocator))
         leaveButtonElement.click()
         alert = driver.switch_to.alert
-        alert.accept() #Accepts the alert
+#        alert.accept() #Accepts the alert
+        alert.dismiss() #Dismisses the alert
         
         """
         I am only using time.sleep() here for you to see the last action of selenium webdriver. I do not recommend using it in your tests.
