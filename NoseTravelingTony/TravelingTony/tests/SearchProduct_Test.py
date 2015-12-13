@@ -5,7 +5,6 @@ import unittest
 import nose
 from nose.plugins.attrib import attr
 
-
 class SearchProductTest(BaseTestCase, unittest.TestCase):
 
     def setUp(self):

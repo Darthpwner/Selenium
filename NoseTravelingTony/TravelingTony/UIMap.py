@@ -24,5 +24,8 @@ WelcomePageMap = dict(SeeCoolestPhotosButtonXpath = "(//span[@class='wsite-butto
 
 )
 
-SearchResultsPageMap = dict( ProductImagesXpath = "//div[@title]"
+# SearchResultsPageMap = dict( ProductImagesXpath = "//div[@title]"
+# )
+
+SearchResultsPageMap = dict( ProductImagesXpath = "//a[@title]"
 )
