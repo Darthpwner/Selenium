@@ -5,6 +5,7 @@ from selenium.webdriver.support               import expected_conditions as EC
 from selenium.webdriver.common.by             import By
 from abc                                      import abstractmethod
 from TravelingTony.Constants                  import LocatorMode
+from BasePage import BasePage
 
 class ContactPage(BasePage):
 
