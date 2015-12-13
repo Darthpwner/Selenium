@@ -28,8 +28,8 @@ class ShareOnTwitter(unittest.TestCase):
         tweetButtonLocator          = "input[value=Tweet]"
         
         #Twitter test account credentials.
-        twitterUsername             = "darthpwner@yahoo.com"
-        twitterPassword             = "Qq1lfj3mmg0!@#$%"
+        twitterUsername             = "tutorys123@gmail.com"
+        twitterPassword             = "year2014"
         
         twSharingLinkElement = WebDriverWait(driver, 10).\
                         until(lambda driver: driver.find_element_by_xpath(twitterSharingLinkLocator))
@@ -70,3 +70,4 @@ if __name__ == "__main__":
 
 
 
+s
