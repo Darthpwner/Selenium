@@ -1,7 +1,8 @@
 from BasePage                import BasePage
 from ShareOnFacebookPage     import ShareOnFacebookPage
 from BasePage                import IncorrectPageException
-from TravelingTony.UIMap import FacebookLoginPageMap
+from TravelingTony.UIMap     import FacebookLoginPageMap
+
 
 class FacebookLoginPage(BasePage):
 
@@ -14,21 +15,24 @@ class FacebookLoginPage(BasePage):
         try:
           self.wait_for_element_visibility(10, 
                                            "id", 
-                                           "email"
+                                           FacebookLoginPageMap['UsernameFieldID']
           )
         except:   
           raise IncorrectPageException
     
     def login(self):
         self.fill_out_field("id", 
-                            "email", 
+                            FacebookLoginPageMap['UsernameFieldID'], 
                             self.username
         )
         self.fill_out_field("id", 
-                            "pass", 
+                            FacebookLoginPageMap['PasswordFieldID'], 
                             self.password
         )
-        self.click(10, "name", "login")
+        self.click(10, 
+                   "name", 
+                   FacebookLoginPageMap['LoginButtonName']
+        )
         return ShareOnFacebookPage(self.driver)
         
         

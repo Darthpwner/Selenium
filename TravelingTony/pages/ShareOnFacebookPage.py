@@ -6,6 +6,7 @@ from selenium.webdriver.common.by             import By
 from abc                                      import abstractmethod
 from TravelingTony.Constants                  import LocatorMode
 from BasePage import BasePage
+from TravelingTony.UIMap import ShareOnFacebookPageMap
 
 class ShareOnFacebookPage(BasePage):
 
