@@ -25,3 +25,11 @@ class ContactPage(BasePage):
       self.fill_out_field("xpath", "//textarea", "My comment")
       self.click(10, "xpath", "//span[.='Submit']")
       self.wait_for_element_visibility(10, "xpath", "//div[contains(text(), 'Thank you')]")
+
+  def validation_check(self):
+      self.fill_out_field("xpath", "//input[contains(@name, 'first')]", "Paul")
+      self.fill_out_field("xpath", "//input[contains(@name, 'last')]", "Pierce")
+      self.fill_out_field("xpath", "(//input[contains(@id, 'input')])[3]", "contactemail@test.com")
+      self.fill_out_field("xpath", "//textarea", "My comment")
+      self.click(10, "xpath", "//span[.='Submit']")
+      return self #returns the contact page
