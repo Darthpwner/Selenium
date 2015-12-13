@@ -32,10 +32,16 @@ class sendKeys(unittest.TestCase):
                                until(lambda driver: driver.find_element_by_name(searchFieldName))
         
         actions = ActionChains(driver)  #Used to create action chains
-        actions.send_keys_to_element(searchFieldElement, "Leatherback")
-        actions.send_keys_to_element(searchFieldElement, Keys.ENTER)
+        # actions.send_keys_to_element(searchFieldElement, "Leatherback")
+        # actions.send_keys_to_element(searchFieldElement, Keys.ENTER)
+        # actions.perform()
+
+        #Alternate method - requires more actions but you have the option of picking either
+        actions.click()
+        actions.send_keys("Leatherback")
+        actions.send_keys(Keys.ENTER)        
         actions.perform()
-        
+
         WebDriverWait(driver, 10).\
             until(lambda driver: driver.find_element_by_xpath(turtlePictureLocator))
 
