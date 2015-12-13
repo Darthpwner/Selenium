@@ -32,14 +32,22 @@ class ClickSubmenu(unittest.TestCase):
                                 until(lambda driver: driver.find_element_by_xpath(africaMenuLocator))
         
         actions = ActionChains(driver)  #Creates an ActionChains object
+        #This is not the CLEANEST way to do it
         actions.move_to_element(africaMenuElement)  #Moves to this element
         actions.perform()
-
-        #Make sure the Gabon submenu shows up
         gabonSubMenuElement = WebDriverWait(driver, 10).\
-                            until(EC.visibility_of_element_located((By.XPATH, gabonSubmenuLocator)))
+                           until(EC.visibility_of_element_located((By.XPATH, gabonSubmenuLocator)))
 
         gabonSubMenuElement.click()
+
+#Combines things into action chains
+#Does not work because of Selenium browser capabilities: 
+#MoveTargetOutOfBoundsException: Message: Offset within element cannot be scrolled into view:
+        # actions.move_to_element(africaMenuElement)
+        # actions.click(driver.find_element_by_xpath(gabonSubmenuLocator))
+        # actions.perform()
+
+        #Make sure the Gabon submenu shows up
 
         WebDriverWait(driver, 10).\
             until(lambda driver: driver.find_element_by_xpath(impalaDivLocator))
