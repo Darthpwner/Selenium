@@ -10,10 +10,10 @@ import time
 
 class SeleniumPythonTest(unittest.TestCase):	#Inherits from unittest.TestCase
 	#Init method
-	def __init__(self, driver, url):
-		self.url = url
-		self.driver = driver
-		driver.maximize_window()
+	# def __init__(self, driver, url):
+	# 	self.url = url
+	# 	self.driver = driver
+	# 	driver.maximize_window()
 	#
 
 	#Set up browser

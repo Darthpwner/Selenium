@@ -14,7 +14,7 @@ import time
 
 from SeleniumPythonTest import SeleniumPythonTest
 
-class zendesk(SeleniumPythonTest.SeleniumPythonTest):
+class zendesk(SeleniumPythonTest):
 
 	def setUp(self):
 		global driver 
