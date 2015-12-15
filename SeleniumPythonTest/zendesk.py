@@ -22,14 +22,18 @@ class zendesk(unittest.TestCase):
 
 	def test_selectOption(self):
 		#locators
-		innovativeLocator = "a[contains(@href, '/product/innovative-customer-service/')]"
-		innovativeElement = WebDriverWait(driver, 10).until(lambda driver: driver.find_element_by_tag(innovativeLocator))
+		# innovativeLocator = "a[contains(@href, '/product/innovative-customer-service/')]"
+		# innovativeElement = WebDriverWait(driver, 10).until(lambda driver: driver.find_element_by_tag(innovativeLocator))
+		buttonLocator = "//a[@class='button button-orange']"
+		buttonElement = WebDriverWait(driver, 10).until(lambda driver: driver.find_element_by_xpath(buttonLocator))
 
-		actions = ActionChains(driver)
-		action.send_keys_to_element(innovativeElement, Keys.ENTER)
-		actions.send_keys(Keys.ARROW_DOWN)
-		actions.send_keys(Keys.ARROW_DOWN)
-		actions.perform()
+		buttonElement.click()
+
+		# actions = ActionChains(driver)
+		# action.send_keys_to_element(buttonElement, Keys.ENTER)
+		# actions.send_keys(Keys.ARROW_DOWN)
+		# actions.send_keys(Keys.ARROW_DOWN)
+		# actions.perform()
 
 		time.sleep(10)
 
