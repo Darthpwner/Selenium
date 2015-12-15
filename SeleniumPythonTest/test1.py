@@ -1,6 +1,11 @@
-import SeleniumPythonTest
+from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC 
+from selenium.webdriver.common.by import By 
 
-class Test1(SeleniumPythonTest.SeleniumPythonTest): 
+import unittest
+
+class Test1(unittest.TestCase): 
 
     def setUp(self):
         global driver
@@ -29,3 +34,7 @@ class Test1(SeleniumPythonTest.SeleniumPythonTest):
 
     def tearDown(self):
         driver.quit()
+
+if __name__ == "__main__":
+   unittest.main()
+
