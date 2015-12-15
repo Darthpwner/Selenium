@@ -26,6 +26,15 @@ class SeleniumPythonTest(unittest.TestCase):	#Inherits from unittest.TestCase
 	#Search methods
 	def searchForXpath(locator):
 		WebDriverWait(driver, 10).until(lambda driver: driver.find_element_by_xpath(locator))
-	def searchForCssSelector():
+	def searchForCssSelector(locator):
 		WebDriverWait(driver, 10).until(lambda driver: driver.find_element_by_css_selector(locator))
+	#
+
+	#SearchAndClick methods
+	def searchAndClickBasedOnXpath(locator):
+		buttonElement = WebDriverWait(driver, 10).until(lambda driver: driver.find_element_by_xpath(locator))	#Searches based on xpath
+		buttonElement.click()
+	def searchAndClickBasedOnCssSelector(locator):
+		buttonElement = WebDriverWait(driver, 10).until(lambda driver: driver.find_element_by_css_selector(locator))	#Searches based on CSS selector
+		buttonElement.click()
 	#
