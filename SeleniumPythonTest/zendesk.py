@@ -25,9 +25,15 @@ class zendesk(unittest.TestCase):
 		# innovativeLocator = "a[contains(@href, '/product/innovative-customer-service/')]"
 		# innovativeElement = WebDriverWait(driver, 10).until(lambda driver: driver.find_element_by_tag(innovativeLocator))
 		buttonLocator = "//a[@class='button button-orange']"
-		buttonElement = WebDriverWait(driver, 10).until(lambda driver: driver.find_element_by_xpath(buttonLocator))
+		buttonElement = WebDriverWait(driver, 10).until(lambda driver: driver.find_element_by_xpath(buttonLocator))	#Searches based on xpath
 
 		buttonElement.click()
+
+		googleAuthenticationLocator = "a#googlelogin"
+		#Searches based on CSS selector
+		googleAuthenticationElement = WebDriverWait(driver, 10).until(lambda driver: driver.find_element_by_css_selector(googleAuthenticationLocator))	
+
+		googleAuthenticationElement.click()
 
 		# actions = ActionChains(driver)
 		# action.send_keys_to_element(buttonElement, Keys.ENTER)
